@@ -78,9 +78,13 @@ industrial-copper-modeling/
 
 
 ## Model Details
-# Regression_Models:
+### Regression_Models:
 Model_Metrics= {
-    "Extra Tree Regressor": {'R2': 0.35346726339696477, 'MSE': 0.13012589658985954, 'MAE': 0.14695558807392867},
+    Extra Tree Regressor: 
+    R2= 0.35346726339696477, 
+    MSE= 0.13012589658985954,
+    MAE= 0.14695558807392867,
+    
     "Random Forest": {'R2': 0.43500584933926856, 'MSE': 0.11371484576177718, 'MAE': 0.14151056849977137},
     "Linear Regression": {'R2': 0.03679714967891079, 'MSE': 0.19386123455167917, 'MAE': 0.213038783258982},
     "Ridge Regression": {'R2': 0.03679715745362411, 'MSE': 0.19386123298688362, 'MAE': 0.21303881348902448},
