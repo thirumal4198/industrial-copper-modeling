@@ -60,20 +60,21 @@ print(f"Predicted Status: {'WON' if status_prediction[0] == 7 else 'LOST'}")
 
 
 ## Project Structure
-industrial-copper-modeling/
-├── data/
-│   ├── imported_data.csv
-├── models/
-│   ├── random_forest_regressor.pkl
-│   ├── Extree_clf_model.pkl
-│   ├── scaler.pkl
-│   ├── label_encoders.pkl
-├── notebooks/
-│   ├── cu.ipynb
-├── app/
-│   ├── cu.py
-├── requirements.txt
-├── README.md
+
+   industrial-copper-modeling/
+   ├── data/
+   │   ├── imported_data.csv
+   ├── models/
+   │   ├── random_forest_regressor.pkl
+   │   ├── Extree_clf_model.pkl
+   │   ├── scaler.pkl
+   │   ├── label_encoders.pkl
+   ├── notebooks/
+   │   ├── cu.ipynb
+   ├── app/
+   │   ├── cu.py
+   ├── requirements.txt
+   ├── README.md
 
 
 
