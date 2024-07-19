@@ -22,7 +22,7 @@ cd industrial-copper-modeling
 
 3. Create a virtual environment and activate it:
    python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 4. Install the required dependencies:
    pip install -r requirements.txt
@@ -31,57 +31,55 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 ## Usage
 Running the Streamlit App
 To run the Streamlit app, execute the following command:
-streamlit run cu.py
+      streamlit run cu.py
 
 ## Predicting Selling Price and Status
 You can use the trained models to make predictions on new data. Here is an example:
-import pandas as pd
-import pickle
+      import pandas as pd
+      import pickle
 
 ## Load the models
-with open('random_forest_regressor.pkl', 'rb') as f:
-    reg_model = pickle.load(f)
-with open('Extree_clf_model.pkl', 'rb') as f:
-    clf_model = pickle.load(f)
+      with open('random_forest_regressor.pkl', 'rb') as f:
+          reg_model = pickle.load(f)
+      with open('Extree_clf_model.pkl', 'rb') as f:
+          clf_model = pickle.load(f)
 
 ## Sample data
-data = pd.read_csv('***.csv')
+      data = pd.read_csv('***.csv')
 
 
 ## Preprocess the data (scaling, encoding, etc.)
 
 ## Predict selling price
-selling_price_prediction = reg_model.predict(data)
-print(f"Predicted Selling Price: {selling_price_prediction[0]}")
+      selling_price_prediction = reg_model.predict(data)
+      print(f"Predicted Selling Price: {selling_price_prediction[0]}")
 
 ## Predict status
-status_prediction = clf_model.predict(data)
-print(f"Predicted Status: {'WON' if status_prediction[0] == 7 else 'LOST'}")
+      status_prediction = clf_model.predict(data)
+      print(f"Predicted Status: {'WON' if status_prediction[0] == 7 else 'LOST'}")
 
 
-## Project Structure
+## Project Structure:
 
-   industrial-copper-modeling/
-   ├── data/
-   │   ├── imported_data.csv
-   ├── models/
-   │   ├── random_forest_regressor.pkl
-   │   ├── Extree_clf_model.pkl
-   │   ├── scaler.pkl
-   │   ├── label_encoders.pkl
-   ├── notebooks/
-   │   ├── cu.ipynb
-   ├── app/
-   │   ├── cu.py
-   ├── requirements.txt
-   ├── README.md
+      industrial-copper-modeling/
+      ├── data/
+      │   ├── imported_data.csv
+      ├── models/
+      │   ├── random_forest_regressor.pkl
+      │   ├── Extree_clf_model.pkl
+      │   ├── scaler.pkl
+      │   ├── label_encoders.pkl
+      ├── notebooks/
+      │   ├── cu.ipynb
+      ├── app/
+      │   ├── cu.py
+      ├── requirements.txt
+      ├── README.md
 
 
 
 ## Model Details
 ### Regression_Models:
-Model_Metrics= 
-    
     "Extra Tree Regressor": {'R2': 0.35346726339696477, 'MSE': 0.13012589658985954,'MAE': 0.14695558807392867},
     "Random Forest": {'R2': 0.43500584933926856, 'MSE': 0.11371484576177718, 'MAE': 0.14151056849977137},
     "Linear Regression": {'R2': 0.03679714967891079, 'MSE': 0.19386123455167917, 'MAE': 0.213038783258982},
@@ -91,7 +89,6 @@ Model_Metrics=
 
 
 Classification Models:
-model_metrics = 
 
     "Extra Trees Classifier": {
         "Accuracy": 0.7924,
